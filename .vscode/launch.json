@@ -7,12 +7,22 @@
         {
             "type": "pwa-node",
             "request": "launch",
-            "name": "Launch Program",
+            "name": "PNC",
             "skipFiles": [
                 "<node_internals>/**"
             ],
             "program": "${workspaceFolder}\\index.js",
-            "args": ["ml-invest.json","~/Downloads"]
+            "args": ["pnc-bank.json","~/Downloads"]
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "USBank",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\index.js",
+            "args": ["usbank-bank.json","~/Downloads"]
         }
     ]
 }

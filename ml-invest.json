@@ -1,6 +1,8 @@
 {
     "csv": {
         "headers": "Trade Date,Settlement Date,Account,Description,Type,Symbol/ CUSIP,Quantity,Price,Amount,,",
+        "skipLines" : 3,
+        "type" : "investment",
         "columns": {"date":0,
             "memo":3,
             "security":5,

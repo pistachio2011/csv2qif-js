@@ -1,0 +1,17 @@
+{
+    "csv": {
+        "headers": "Date,Transaction,Name,Memo,Amount",
+        "skipLines" : 1,
+        "type" : "bank",
+        "dateFormat" : "YYYY-MM-DD",
+        "columns": {"date":0,
+            "checknum":1,
+            "payee":2,
+            "memo":3,
+            "amount":4
+        }
+    },
+    "interestPayee" : "US Bank",
+    "bankCategories": {
+        "INTEREST": "Investment Inco:Interest"
+    }}
