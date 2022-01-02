@@ -1,0 +1,31 @@
+{
+    "csv": {
+        "comments" : ["PNC Bank UI is buggy.",
+            "If you use search transaction for 1 year, then export, the export only give the last 90 days of history.",
+            "The workaround is to copy the output from screen to google spreadsheet, then save the csv"],
+    
+        "headers": "Date,Description,Withdrawals,Deposits,Balance",
+        "skipLines" : 1,
+        "type" : "bank",
+        "columns": {"date":0,
+            "memo":1,
+            "withdrawls": 2,
+            "amount": 3
+        }
+    },
+    "transfer" :{
+        "ONLINE TRANSFER TO XXXXX1111" : "PNC Savings",
+        "ONLINE TRANSFER FROM XXXXX1111" : "PNC Savings",
+        "ONLINE TRANSFER TO XXXXX2222" : "PNC Checking",
+        "ONLINE TRANSFER FROM XXXXX2222" : "PNC Checking"        
+    },
+    "payee" : {
+        "INTEREST PAYMENT" : "PNC Bank"
+    },
+    "payeePatterns" : [
+        "DEBIT CARD PURCHASE(.*)", "POS PURCHASE(.*)", "ACH WEBSINGLE(.*)"
+    ],
+    "bankCategories": {
+        "INTEREST": "Investment Inco:Interest"
+    }
+ }

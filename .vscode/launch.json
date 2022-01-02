@@ -7,12 +7,41 @@
         {
             "type": "pwa-node",
             "request": "launch",
-            "name": "Launch Program",
+            "name": "PNC",
             "skipFiles": [
                 "<node_internals>/**"
             ],
             "program": "${workspaceFolder}\\index.js",
-            "args": ["ml-invest.json","~/Downloads"]
+            "args": ["pnc-bank.json","${input:directory}"]
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "USBank",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\index.js",
+            "args": ["usbank-bank.json","${input:directory}"]
+        }
+    ],
+    "inputs": [
+        {
+          "type": "pickString",
+          "id": "config",
+          "description": "configuration file",
+          "options": [
+            "usbank-bank.json",
+            "pnc-bank.json",
+            "ml-invest.json"
+          ],
+          "default": "pnc-bank.json"
+        },
+        {
+          "type": "promptString",
+          "id": "directory",
+          "description": "Directory name which contains csv files",
+          "default": "c:/users/mingfu qin/downloads"
         }
     ]
 }
