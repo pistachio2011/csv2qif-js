@@ -13,7 +13,18 @@
             "amount": 3
         }
     },
-    "interestPayee" : "PNC Bank",
+    "transfer" :{
+        "ONLINE TRANSFER TO XXXXX1111" : "PNC Savings",
+        "ONLINE TRANSFER FROM XXXXX1111" : "PNC Savings",
+        "ONLINE TRANSFER TO XXXXX2222" : "PNC Checking",
+        "ONLINE TRANSFER FROM XXXXX2222" : "PNC Checking"        
+    },
+    "payee" : {
+        "INTEREST PAYMENT" : "PNC Bank"
+    },
+    "payeePatterns" : [
+        "DEBIT CARD PURCHASE(.*)", "POS PURCHASE(.*)", "ACH WEBSINGLE(.*)"
+    ],
     "bankCategories": {
         "INTEREST": "Investment Inco:Interest"
     }
