@@ -1,17 +1,29 @@
 {
   "name": "csv2qif",
   "version": "1.0.0",
-  "description": "",
+  "description": "- inspired by https://github.com/kyleshevlin/csv-to-qif-conversion-script",
   "main": "index.js",
   "scripts": {
-    "convert": "node index.js"
+    "convert": "node index.js",
+    "test" : "jest"
   },
   "devDependencies": {
-    "csv-parse": "^5.0.4"
+    "jest": "^27.4.7"
   },
   "dependencies": {
     "fast-csv": "^4.3.6",
     "moment": "^2.29.1",
     "stream-filter": "^2.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pistachio2011/csv2qif-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pistachio2011/csv2qif-js/issues"
+  },
+  "homepage": "https://github.com/pistachio2011/csv2qif-js#readme"
 }
