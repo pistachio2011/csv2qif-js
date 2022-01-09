@@ -4,8 +4,8 @@
   "description": "- inspired by https://github.com/kyleshevlin/csv-to-qif-conversion-script",
   "main": "index.js",
   "scripts": {
-    "convert": "node index.js",
-    "test" : "jest"
+    "start": "node src/app.js",
+    "test": "jest"
   },
   "devDependencies": {
     "jest": "^27.4.7"

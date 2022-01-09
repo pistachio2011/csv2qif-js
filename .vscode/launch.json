@@ -3,7 +3,41 @@
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
-    "configurations": [       
+    "configurations": [
+        {
+            "name": "Launch Program",
+            "program": "${workspaceFolder}/src/app.js",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "pwa-node",
+            "args": [
+                "${input:config}",
+                "${input:directory}"
+            ],
+            "envVars": {
+                "VSCMD_START_DIR": "${workspaceRoot}"
+            }
+        },
+
+        {
+            "type": "node",
+            "name": "vscode-jest-tests",
+            "request": "launch",
+            "program": "${workspaceFolder}/node_modules/.bin/jest",
+            "args": [
+                "--runInBand",
+                "--watchAll=false"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "disableOptimisticBPs": true,
+            "windows": {
+                "program": "${workspaceFolder}/node_modules/jest/bin/jest"
+            }
+        },
         {
             "type": "pwa-node",
             "request": "launch",
@@ -12,7 +46,10 @@
                 "<node_internals>/**"
             ],
             "program": "${workspaceFolder}\\src\\app.js",
-            "args": ["pnc-bank.json","${input:directory}"]
+            "args": [
+                "${workspaceFolder}\\src\\config\\pnc-bank.json",
+                "${workspaceFolder}\\src\\test-config\\pncbank.csv"
+            ]
         },
         {
             "type": "pwa-node",
@@ -22,26 +59,42 @@
                 "<node_internals>/**"
             ],
             "program": "${workspaceFolder}\\src\\app.js",
-            "args": ["usbank-bank.json","${input:directory}"]
+            "args": [
+                "${workspaceFolder}\\src\\config\\usbank-bank.json",
+                "${workspaceFolder}\\src\\config\\usbank.csv"
+            ]
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "Merrill Lynch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\src\\app.js",
+            "args": [
+                "${workspaceFolder}\\src\\config\\ml-invest.json",
+                "${workspaceFolder}\\src\\test-config\\ml-investment.csv"
+            ]
         }
     ],
     "inputs": [
         {
-          "type": "pickString",
-          "id": "config",
-          "description": "configuration file",
-          "options": [
-            "usbank-bank.json",
-            "pnc-bank.json",
-            "ml-invest.json"
-          ],
-          "default": "pnc-bank.json"
+            "type": "pickString",
+            "id": "config",
+            "description": "configuration file",
+            "options": [
+                "${workspaceFolder}/src/config/usbank-bank.json",
+                "${workspaceFolder}/src/config/pnc-bank.json",
+                "${workspaceFolder}/src/config/ml-invest.json"
+            ],
+            "default": "pnc-bank.json"
         },
         {
-          "type": "promptString",
-          "id": "directory",
-          "description": "Directory name which contains csv files",
-          "default": "c:/users/mingfu qin/downloads"
+            "type": "promptString",
+            "id": "directory",
+            "description": "Directory name which contains csv files",
+            "default": "${workspaceFolder}"
         }
     ]
 }
