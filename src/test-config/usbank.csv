@@ -1,0 +1,8 @@
+"Date","Transaction","Name","Memo","Amount"
+"2021-12-13","DEBIT","WEB AUTHORIZED PMT ","Download from usbank.com.","-107.79"
+"2021-12-15","DEBIT","MONTHLY MAINTENANCE FEE","Download from usbank.com.","-6.95"
+"2021-12-15","CREDIT","MONTHLY MAINTENANCE FEE WAIVED","Download from usbank.com.","6.95"
+"2021-12-22","DEBIT","ELECTRONIC WITHDRAWAL INS CO","Download from usbank.com.","-100.78"
+"2021-12-31","CREDIT","ELECTRONIC DEPOSIT US INC","Download from usbank.com.","100.04"
+"2022-01-07","DEBIT","WEB AUTHORIZED PMT CARDMEMBER SVC","Download from usbank.com.","-5000.00"
+"2022-01-07","1234","CHECK","Download from usbank.com.","-19.50"
