@@ -7,7 +7,6 @@ class TransactionMapper {
 		this.config = config
 	}
 
-
 	getSafeDate(dateStr) {
 		if (dateStr && this.config.csv.dateFormat) {
 			const tradeDate = moment(dateStr, `${this.config.csv.dateFormat}`);
@@ -67,8 +66,7 @@ class TransactionMapper {
 			'bankTx': bankTx,
 			'investTx': investTx
 		};
-	};
-
+  };
 }
 
 module.exports = TransactionMapper

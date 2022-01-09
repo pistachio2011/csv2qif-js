@@ -1,0 +1,10 @@
+{
+  "extends": ["google", "prettier", "plugin:node/recommended"],
+  "plugins": ["prettier"],
+  "rules": {
+      "prettier/prettier" : "warn",
+      "no-console": "off",
+      "func-names": "off",
+      "object-shorthand": "off"
+  }
+}

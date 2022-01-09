@@ -10,7 +10,6 @@
             "amount":8
         }
     },
-    "actionField": "memo",
     "interestPayee" : "Merril Lynch",
     "investment": {
         "DIVIDEND": "Div",

@@ -1,11 +1,11 @@
 const fs = require('fs');
 
 // QIF Spec http://www.respmech.com/mym2qifw/qif_new.htm
+
 class QIFGenerator {
 
 	save2File(transactions, filenamePrefix) {
 		if (transactions.bankTx) {
-
 			const bankTxString = transactions.bankTx.map(transaction => { return this.formatBankTx(transaction); })
 				.join('\n\n');
 			fs.writeFile(filenamePrefix + '.bank.qif', '!Type:Bank\n' + bankTxString,
@@ -14,6 +14,7 @@ class QIFGenerator {
 					console.log(filenamePrefix + '.bank.qif created.');
 				});
 		}
+
 		if (transactions.investTx) {
 			const investTx = transactions.investTx
 				.map(transaction => { return this.formatInvestTx(transaction); })
@@ -59,4 +60,5 @@ class QIFGenerator {
 	};
 
 }
+
 module.exports = QIFGenerator;

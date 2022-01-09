@@ -4,11 +4,17 @@
   "description": "- inspired by https://github.com/kyleshevlin/csv-to-qif-conversion-script",
   "main": "index.js",
   "scripts": {
-    "start": "node src/app.js",
+    "convert": "node src/app.js",
     "test": "jest"
   },
   "devDependencies": {
-    "jest": "^27.4.7"
+    "eslint": "^8.6.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.4.7",
+    "prettier": "^2.5.1"
   },
   "dependencies": {
     "fast-csv": "^4.3.6",
