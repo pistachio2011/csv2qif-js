@@ -1,0 +1,13 @@
+{
+    "csv": {
+        "headers": "Date,Transaction,Name,Memo,Amount",
+        "skipLines" : 1,
+        "type" : "bank",
+        "dateFormat" :"MM/DD/YYYY",
+        "columns": {"date":0,
+            "payee":2,
+            "memo":3,
+            "amount":4
+        }
+    }
+ }
