@@ -1,0 +1,43 @@
+{
+    "csv": {
+        "headers": "Run Date,Action,Symbol,Security Description,Security Type,Quantity,Price ($),Commission ($),Fees ($),Accrued Interest ($),Amount ($),Settlement Date",
+        "skipLines" : 5,
+        "type" : "investment",
+        "dateFormat" :"MM/DD/YYYY",
+        "columns": {"date":0,
+            "security":2,
+            "memo":1,
+            "quantity":5,
+            "commission":7,
+            "fee":8,
+            "amount":10
+        }
+    },
+    "transfer" :{},
+    "interestPayee" : "Fidelity Cash Reserves",
+    "payee" : {
+        "DIRECT DEPOSIT ELAN CARDSVCRedemption" : "Visa Signature",
+        "INTEREST EARNED CASH" : "Fidelity Cash Reserves",
+        "REINVESTMENT CASH" : "Fidelity Cash Reserves",
+        "REINVESTMENT FIDELITY GOVERNMENT CASH RESERVES" : "Fidelity Cash Reserves",
+        "DIVIDEND RECEIVED FIDELITY GOVERNMENT CASH RESERVES": "Fidelity Cash Reserves",
+        "FEE CHARGED" : "Fidelity",
+        "FOREIGN TAX PAID": "Fidelity"
+    },
+    "investment": {
+        "DIVIDEND": "Div",
+        "YOU BOUGHT": "Buy",
+        "YOU SOLD": "Sell",
+        "REINVESTMENT": "ReinvDiv"
+    },
+    "bankCategories": {
+        "TRANSFER": "Transfer",
+        "DIRECT DEPOSIT" : "Other Income : Percent Rebate",
+        "REINVESTMENT CASH" : "Investment Inco:Interest",
+        "INTEREST EARNED CASH" : "Investment Inco:Interest",
+        "REINVESTMENT FIDELITY GOVERNMENT CASH RESERVES" : "Investment Inco:Interest",
+        "DIVIDEND RECEIVED FIDELITY GOVERNMENT CASH RESERVES": "Investment Inco:Interest",
+        "FEE CHARGED" : "Bank Charges : Fee Charged",
+        "FOREIGN TAX PAID":"Taxes : FOREIGN TAX PAID"
+    }
+}

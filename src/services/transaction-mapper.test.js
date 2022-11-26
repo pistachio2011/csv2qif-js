@@ -2,6 +2,21 @@ const TransactionMapper = require('./transaction-mapper');
 const pnc = require ('../config/pnc-bank.json');
 const usbank = require('../config/usbank-bank.json');
 const myrillLynch = require('../config/ml-invest.json');
+const fidelityInv = require('../config/fidelity-ira.json');
+
+
+test('get a category from a memo', () => {
+	const memo = "DIRECT DEPOSIT ELAN CARDSVCRedemption (Cash)";
+	let test = Object.entries(fidelityInv.bankCategories).filter(function(t) {
+		return memo.indexOf(t[0]) >= 0;
+	});
+	let category = test[0][1];
+	
+	console.log(category);
+	expect(category).toBe("Other Income : Percent Rebate");
+
+});
+
 
 test('convert a pnc bank export to transaction json objects', () => {
 	

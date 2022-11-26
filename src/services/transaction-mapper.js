@@ -25,7 +25,15 @@ class TransactionMapper {
 		if (!tx.payee && this.config.payee) {
 			const translated = this.config.transfer[`${memo}`];
 			if (translated) { tx.payee = translated; }
-			if (tx.payee == undefined && this.config.payeePatterns) {
+			if (!tx.payee && this.config.payee) {
+				let entry = Object.entries(this.config.payee).filter(function(key) {
+					return memo.indexOf(key[0]) >= 0;
+				});
+				if (entry[0]) {
+					tx.payee = entry[0][1];
+				}
+			}
+			if (!tx.payee && this.config.payeePatterns) {
 				this.config.payeePatterns.forEach(pattern => {
 					let regex = new RegExp(pattern, 'g');
 					let p = regex.exec(memo);
@@ -34,10 +42,20 @@ class TransactionMapper {
 			}
 		}
 		if (!tx.category && this.config.bankCategories) {
-			tx.category = this.config.bankCategories[memo.toUpperCase().replace(/ .*/, '')];
+			let entry = Object.entries(this.config.bankCategories).filter(function(key) {
+				return memo.indexOf(key[0]) >= 0;
+			});
+			if (entry[0]) {
+				tx.category = entry[0][1];
+			}
 		}
 		if (!tx.action && this.config.investment) {
-			tx.action = this.config.investment[memo.toUpperCase().replace(/ .*/, '')];
+			let entry = Object.entries(this.config.investment).filter(function(key) {
+				return memo.indexOf(key[0]) >= 0;
+			});
+			if (entry[0]) {
+				tx.action = entry[0][1];
+			}
 		}
 		return tx;
 	};
@@ -51,10 +69,15 @@ class TransactionMapper {
 			.map(transaction => {
 				let tx = {};
 				for (const key in this.config.csv.columns) {
-					tx[`${key}`] = transaction[`${this.config.csv.columns[key]}`];
+					let value = transaction[`${this.config.csv.columns[key]}`];
+					if (value) {
+						tx[`${key}`] = value.trim();
+					}
 				}
 				tx.date = this.getSafeDate(tx.date);
-				tx.amount = `${tx.amount.replace(/\$/, '')}`;
+				if (tx.amount) {
+					tx.amount = `${tx.amount.replace(/\$/, '')}`;
+				}
 				tx = this.guess(tx.memo, tx);
 				return tx;
 			});

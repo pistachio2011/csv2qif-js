@@ -43,8 +43,8 @@
             "program": "${workspaceFolder}\\src\\app.js",
             "args": [
                 "${workspaceFolder}\\src\\config\\usbank-bank.json",
-                "${workspaceFolder}\\src\\test-config\\usbank.csv"
-            ]
+                "${input:args}"
+             ]
         },
         {
             "type": "node",
@@ -71,6 +71,19 @@
                 "${workspaceFolder}\\src\\config\\ml-invest.json",
                 "${workspaceFolder}\\src\\test-config\\ml-investment.csv"
             ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Fidelity IRA",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\src\\app.js",
+            "args": [
+                "${workspaceFolder}\\src\\config\\fidelity-ira.json",
+                "${workspaceFolder}\\src\\test-config\\fidelity-ira.csv"
+            ]
         }
     ],
     "inputs": [
@@ -81,15 +94,18 @@
             "options": [
                 "${workspaceFolder}/src/config/usbank-bank.json",
                 "${workspaceFolder}/src/config/pnc-bank.json",
-                "${workspaceFolder}/src/config/ml-invest.json"
+                "${workspaceFolder}/src/config/ml-invest.json",
+                "${workspaceFolder}/src/config/fielity-visa.json",
+                "${workspaceFolder}/src/config/fidelity-brokerage.json",
+                "${workspaceFolder}/src/config/fidelity-ira.json"
             ],
-            "default": "pnc-bank.json"
+            "default": "${workspaceFolder}/src/config/fidelity-ira.json"
         },
         {
             "type": "promptString",
             "id": "directory",
             "description": "Directory name which contains csv files",
-            "default": "${workspaceFolder}"
+            "default": "C:\\Users\\Test Name\\Downloads"
         }
     ]
 }
