@@ -6,6 +6,7 @@
     
         "headers": "Date,Description,Withdrawals,Deposits,Balance",
         "skipLines" : 1,
+        "dateFormat" :"MM/DD/YYYY",
         "type" : "bank",
         "columns": {"date":0,
             "memo":1,

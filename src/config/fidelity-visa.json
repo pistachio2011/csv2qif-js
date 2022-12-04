@@ -3,7 +3,7 @@
         "headers": "Date,Transaction,Name,Memo,Amount",
         "skipLines" : 1,
         "type" : "bank",
-        "dateFormat" :"MM/DD/YYYY",
+        "dateFormat" :"YYYY-MM-DD",
         "columns": {"date":0,
             "payee":2,
             "memo":3,

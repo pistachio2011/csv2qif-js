@@ -1,13 +1,13 @@
 {
     "csv": {
         "headers": "Run Date,Action,Symbol,Security Description,Security Type,Exchange Quantity,Exchange Currency,Quantity,Currency,Price,Exchange Rate,Commission,Fees,Accrued Interest,Amount,Settlement Date",
-        "skipLines" : 5,
+        "skipLines" : 2,
         "type" : "investment",
         "dateFormat" :"MM/DD/YYYY",
         "columns": {"date":0,
             "security":2,
             "memo":1,
-            "quantity":9,
+            "quantity":7,
             "commission":11,
             "amount":14
         }
@@ -19,15 +19,22 @@
         "INTEREST EARNED CASH" : "Fidelity Cash Reserves",
         "REINVESTMENT CASH" : "Fidelity Cash Reserves",
         "REINVESTMENT FIDELITY GOVERNMENT CASH RESERVES" : "Fidelity Cash Reserves",
-        "DIVIDEND RECEIVED FIDELITY GOVERNMENT CASH RESERVES": "Fidelity Cash Reserves",
-        "FEE CHARGED" : "Fidelity",
-        "FOREIGN TAX PAID": "Fidelity"
+        "DIVIDEND RECEIVED FIDELITY GOVERNMENT CASH RESERVES": "Fidelity Cash Reserves"   
     },
     "investment": {
         "DIVIDEND": "Div",
         "YOU BOUGHT": "Buy",
         "YOU SOLD": "Sell",
-        "REINVESTMENT as of": "ReinvDiv"
+        "REINVESTMENT as of": "ReinvDiv",
+        "REINVESTMENT QUEST": "Buy",
+        "FEE CHARGED": "MiscExp",
+        "FOREIGN TAX PAID": "MiscExp",
+        "IN LIEU OF FRX SHARE": "Sell",
+        "REINVESTMENT": "ReinvDiv",
+        "SHORT-TERM CAP GAIN": "CGShort",
+        "Shares In": "ReinvDiv",
+        "Add Shares": "ShrsIn",
+        "REDEMPTION PAYOUT": "RtrnCap"
     },
     "bankCategories": {
         "TRANSFER": "Transfer",
@@ -35,8 +42,5 @@
         "REINVESTMENT CASH" : "Investment Inco:Interest",
         "INTEREST EARNED CASH" : "Investment Inco:Interest",
         "REINVESTMENT FIDELITY GOVERNMENT CASH RESERVES" : "Investment Inco:Interest",
-        "DIVIDEND RECEIVED FIDELITY GOVERNMENT CASH RESERVES": "Investment Inco:Interest",
-        "FEE CHARGED" : "Bank Charges : Fee Charged",
-        "FOREIGN TAX PAID":"Taxes : FOREIGN TAX PAID"
-    }
+        "DIVIDEND RECEIVED FIDELITY GOVERNMENT CASH RESERVES": "Investment Inco:Interest"    }
 }

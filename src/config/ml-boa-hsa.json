@@ -1,0 +1,22 @@
+{
+    "csv": {
+        "headers": "Requested Date,Processed Date,Description,Method,Amount,Available Cash Balance,Applied to Contribution Maximum,Check Number,Check Date,Date of Service,Merchant Name,Adjustment Reason,Consumer Note,Tax Year,Tax Detail",
+        
+        "skipLines" : 1,
+        "type" : "bank",
+        "dateFormat" :"MM/DD/YYYY",
+        "columns": {"date":1,
+            "memo":2,
+            "amount":4
+        }
+    },
+    "interestPayee" : "HSA Bank",
+    "bankCategories": {
+        "Fee Distribution" : "Bank Charges : Admin Fee",
+        "Interest" : "Investment Inco:Interest"
+    },
+    "payee" : {
+        "Fee Distribution" : "HSA Bank",
+        "Interest" : "HSA Bank"
+    }
+}

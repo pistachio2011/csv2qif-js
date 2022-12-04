@@ -11,7 +11,7 @@ class QIFGenerator {
 			fs.writeFile(filenamePrefix + '.bank.qif', '!Type:Bank\n' + bankTxString,
 				(err) => {
 					if (err) console.log(err);
-					console.log(filenamePrefix + '.bank.qif created.');
+					console.log(transactions.bankTx.length + " bank records generated in " + filenamePrefix + '.bank.qif created.');
 				});
 		}
 
@@ -22,8 +22,9 @@ class QIFGenerator {
 			fs.writeFile(filenamePrefix + '.invest.qif', '!Type:Invst\n' + investTx,
 				(err) => {
 					if (err) console.log(err);
-					console.log(filenamePrefix + '.bank.qif created.');
+					console.log(transactions.investTx.length + " investment records generated in " + filenamePrefix + '.bank.qif created.');
 				});
+			
 		}
 	};
 

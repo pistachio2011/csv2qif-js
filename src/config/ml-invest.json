@@ -1,8 +1,9 @@
 {
     "csv": {
         "headers": "Trade Date,Settlement Date,Account,Description,Type,Symbol/ CUSIP,Quantity,Price,Amount,,",
-        "skipLines" : 3,
+        "skipLines" : 4,
         "type" : "investment",
+        "dateFormat" :"MM/DD/YYYY",
         "columns": {"date":0,
             "memo":3,
             "security":5,
@@ -12,14 +13,17 @@
     },
     "interestPayee" : "Merril Lynch",
     "investment": {
-        "DIVIDEND": "Div",
-        "PURCHASE": "Buy",
-        "SELL": "Sell"
+        "Dividend": "Div",
+        "Purchase": "Buy",
+        "Sell": "Sell"
     },
     "bankCategories": {
-        "INTEREST": "Investment Inco:Interest",
-        "TRANSFER": "Transfer",
-        "FUNDS" : "Transfer",
-        "BANK" :  "Investment Inco:Interest"
+        "Bank Interest ML" : "Investment Inco:Interest",
+        "Interest BANK OF AMERICA" : "Investment Inco:Interest",
+        "Funds Received" : "Transfer"
+    },
+    "payee" : {
+        "Bank Interest ML" : "Merril Lynch",
+        "Interest BANK OF AMERICA" : "Merril Lynch"
     }
 }
