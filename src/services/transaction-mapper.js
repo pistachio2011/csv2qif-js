@@ -27,6 +27,16 @@ class TransactionMapper {
         }
       }
     }
+
+    if (!tx.category && this.config.bankCategories) {
+      let entry = Object.entries(this.config.bankCategories)
+                        .filter(function (key) {
+                          return memo? memo.indexOf(key[0]) >= 0 : null;
+      });
+      if (entry[0]) {
+        tx.category = entry[0][1];
+      }
+    }
     if (!tx.payee && this.config.payee) {
       let entry = Object.entries(this.config.payee).filter(function (key) {
         return memo.indexOf(key[0]) >= 0;
@@ -40,16 +50,6 @@ class TransactionMapper {
           let p = regex.exec(memo);
           if (p) tx.payee = p[1].trim();
         });
-      }
-    }
-    if (!tx.category && this.config.bankCategories) {
-      let entry = Object.entries(this.config.bankCategories).filter(function (
-        key
-      ) {
-        return memo.indexOf(key[0]) >= 0;
-      });
-      if (entry[0]) {
-        tx.category = entry[0][1];
       }
     }
     if (!tx.action && this.config.investment) {
@@ -114,7 +114,7 @@ class TransactionMapper {
           })
         )
         .on('data', (data) => {
-          data.length > 3 ? results.push(data) : {};
+          data.length > 2 ? results.push(data) : {};
         })
         .on('end', () => {
           resolve(this.map2tx(results));
