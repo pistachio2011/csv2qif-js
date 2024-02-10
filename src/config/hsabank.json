@@ -10,13 +10,13 @@
             "amount":4
         }
     },
-    "interestPayee" : "Merril Lynch",
+    "interestPayee" : "HSA Bank",
     "bankCategories": {
         "Fee Distribution" : "Bank Charges : Admin Fee",
         "Interest" : "Investment Inco:Interest"
     },
     "payee" : {
-        "Fee Distribution" : "Merril Lynch",
-        "Interest" : "Merril Lynch"
+        "Fee Distribution" : "HSA Bank",
+        "Interest" : "HSA Bank"
     }
 }
