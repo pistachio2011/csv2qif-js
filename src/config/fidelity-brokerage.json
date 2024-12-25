@@ -1,7 +1,7 @@
 {
     "csv": {
-        "headers": "Run Date,Action,Symbol,Security Description,Security Type,Exchange Quantity,Exchange Currency,Quantity,Currency,Price,Exchange Rate,Commission,Fees,Accrued Interest,Amount,Settlement Date",
-        "skipLines" : 2,
+        "headers": "Run Date,Action,Symbol,Description,Type,Quantity,Price ($),Commission ($),Fees ($),Accrued Interest ($),Amount ($),Cash Balance ($),Settlement Date",
+        "skipLines" : 1,
         "type" : "investment",
         "dateFormat" :"MM/DD/YYYY",
         "columns": {"date":0,
@@ -25,8 +25,6 @@
         "DIVIDEND": "Div",
         "YOU BOUGHT": "Buy",
         "YOU SOLD": "Sell",
-        "REINVESTMENT as of": "ReinvDiv",
-        "REINVESTMENT QUEST": "Buy",
         "FEE CHARGED": "MiscExp",
         "FOREIGN TAX PAID": "MiscExp",
         "IN LIEU OF FRX SHARE": "Sell",
@@ -41,6 +39,7 @@
         "DIRECT DEPOSIT" : "Other Income : Percent Rebate",
         "REINVESTMENT CASH" : "Investment Inco:Interest",
         "INTEREST EARNED CASH" : "Investment Inco:Interest",
+        "TAX WITHHELD CASH": "Taxes : Federal Income Tax",
         "REINVESTMENT FIDELITY GOVERNMENT CASH RESERVES" : "Investment Inco:Interest",
         "DIVIDEND RECEIVED FIDELITY GOVERNMENT CASH RESERVES": "Investment Inco:Interest"    }
 }

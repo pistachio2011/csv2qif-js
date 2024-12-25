@@ -35,13 +35,18 @@
             "options": [
                 "${workspaceFolder}/src/config/usbank-bank.json",
                 "${workspaceFolder}/src/config/pnc-bank.json",
+                "${workspaceFolder}/src/config/hsabank.json",
+                "${workspaceFolder}/src/config/schwab-invest.json",
+                "${workspaceFolder}/src/config/wexhealth.json",
                 "${workspaceFolder}/src/config/ml-invest.json",
                 "${workspaceFolder}/src/config/ml-boa-hsa.json",
                 "${workspaceFolder}/src/config/fidelity-visa.json",
                 "${workspaceFolder}/src/config/fidelity-brokerage.json",
-                "${workspaceFolder}/src/config/fidelity-ira.json"
+                "${workspaceFolder}/src/config/fidelity-ira.json",
+                "${workspaceFolder}/src/config/fidelity-espp.json",
+                "${workspaceFolder}/src/config/rq-mine.json"
             ],
-            "default": "${workspaceFolder}/src/config/fidelity-ira.json"
+            "default": "${workspaceFolder}/src/config/rq-mine.json"
         }
     ]
 }

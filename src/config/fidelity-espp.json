@@ -1,6 +1,6 @@
 {
     "csv": {
-        "headers": "Run Date,Action,Symbol,Description,Type,Quantity,Price ($),Commission ($),Fees ($),Accrued Interest ($),Amount ($),Settlement Date",
+        "headers": "Run Date,Action,Symbol,Description,Type,Quantity,Price ($),Commission ($),Fees ($),Accrued Interest ($),Amount ($),Cash Balance ($),Settlement Date",
         "skipLines" : 2,
         "type" : "investment",
         "dateFormat" :"MM/DD/YYYY",
@@ -40,7 +40,7 @@
         "DIRECT DEPOSIT" : "Other Income : Percent Rebate",
         "REINVESTMENT CASH" : "Investment Inco:Interest",
         "INTEREST EARNED CASH" : "Investment Inco:Interest",
+        "TAX WITHHELD CASH": "Taxes : Federal Income Tax",
         "REINVESTMENT FIDELITY GOVERNMENT CASH RESERVES" : "Investment Inco:Interest",
-        "DIVIDEND RECEIVED FIDELITY GOVERNMENT CASH RESERVES": "Investment Inco:Interest"
-    }
+        "DIVIDEND RECEIVED FIDELITY GOVERNMENT CASH RESERVES": "Investment Inco:Interest"    }
 }

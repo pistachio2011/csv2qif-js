@@ -1,0 +1,30 @@
+{
+    "csv": {
+        "headers": "Date,Action,Symbol,Description,Quantity,Price,Fees & Comm,Amount",
+        "skipLines" : 1,
+        "type" : "investment",
+        "dateFormat" :"MM/DD/YYYY",
+        "columns": {"date":0,
+            "memo":1,
+            "security":2,
+            "quantity":4,
+            "commission":6,
+            "amount":7
+        }
+    },
+    "interestPayee" : "Schwab",
+    "investment": {
+        "Dividend": "Div",
+        "Purchase": "Buy",
+        "Sell": "Sell",
+        "Sale": "Sell",
+        "Reinvest": "ReinvDiv"
+    },
+    "bankCategories": {
+        "Bank Interest" : "Investment Inco:Interest",
+        "Funds Received" : "Transfer"
+    },
+    "payee" : {
+        "Bank Interest" : "Schwab"
+    }
+}

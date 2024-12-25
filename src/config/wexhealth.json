@@ -1,12 +1,12 @@
 {
     "csv": {
-        "headers": "Transaction Status,Effective Date,Posting Date,Payment Date,Type,Description,Amount,Running Balance,Check Number,Claim Payment Method,Claim Number",        
+        "headers": "Requested Date,Processed Date,Description,Method,Amount,Available Cash Balance,Applied to Contribution Maximum,Check Number,Check Date,Date of Service,Merchant Name,Adjustment Reason,Consumer Note,Tax Year,Tax Detail",        
         "skipLines" : 1,
         "type" : "bank",
         "dateFormat" :"MM/DD/YYYY",
         "columns": {"date":1,
-            "memo":5,
-            "amount":6
+            "memo":2,
+            "amount":4
         }
     },
     "interestPayee" : "HSA Bank",
