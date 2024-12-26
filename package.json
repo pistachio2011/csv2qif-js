@@ -17,8 +17,11 @@
     "prettier": "^2.5.1"
   },
   "dependencies": {
+    "csv2qif": "file:",
     "fast-csv": "^4.3.6",
-    "moment": "^2.29.1",
+    "fs": "^0.0.1-security",
+    "moment": "^2.29.4",
+    "path": "^0.12.7",
     "stream-filter": "^2.1.0"
   },
   "repository": {

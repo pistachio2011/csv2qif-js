@@ -5,7 +5,7 @@ const fs = require('fs');
 class QIFGenerator {
 
 	save2File(transactions, filenamePrefix) {
-		if (transactions.bankTx) {
+		if (transactions.bankTx && transactions.bankTx.length > 0) {
 			const bankTxString = transactions.bankTx.map(transaction => { return this.formatBankTx(transaction); })
 				.join('\n\n');
 			fs.writeFile(filenamePrefix + '.bank.qif', '!Type:Bank\n' + bankTxString,
@@ -15,7 +15,7 @@ class QIFGenerator {
 				});
 		}
 
-		if (transactions.investTx) {
+		if (transactions.investTx && transactions.investTx.length > 0) {
 			const investTx = transactions.investTx
 				.map(transaction => { return this.formatInvestTx(transaction); })
 				.join('\n\n');

@@ -1,0 +1,18 @@
+{
+    "csv": {
+        "headers": "Date,Amount,Memo,Payee,Category",
+        "skipLines" : 2,
+        "type" : "bank",
+        "dateFormat" : "MM/DD/YYYY",
+        "columns": {"date":0,
+            "memo":2,
+            "payee":3,
+            "category":4,
+            "amount":1
+        }
+    },
+    "interestPayee" : "Mom",
+    "bankCategories": {
+        "Interest": "Investment Inco:Interest",
+        "Transfer": "Transfer"
+    }}

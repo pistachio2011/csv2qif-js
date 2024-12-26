@@ -1,3 +1,5 @@
 node_modules/
 *.qif
 *.mine.json
+csv2qif-js.code-workspace
+package-lock.json
