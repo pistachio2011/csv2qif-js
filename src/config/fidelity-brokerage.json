@@ -9,7 +9,8 @@
             "memo":1,
             "quantity":7,
             "commission":11,
-            "amount":14
+            "amount":14,
+            "balance":15
         }
     },
     "transfer" :{},
