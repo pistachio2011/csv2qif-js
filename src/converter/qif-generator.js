@@ -6,13 +6,28 @@ class QIFGenerator {
 
 	save2File(transactions, filenamePrefix) {
 		if (transactions.bankTx && transactions.bankTx.length > 0) {
+			const lastTx = transactions.bankTx.sort((a, b) => new Date(b.date) - new Date(a.date))[0];
+			
+			if (lastTx.balance) {
+				// get the last part of the filenamePrefix as the account name
+				const acctname = filenamePrefix.split('.').pop();
+				const blanceTx = { date: lastTx.date,
+					 amount: 0,
+					 payee: '******BALANCE*****',
+					 category: 'A Do Not Count - Exp',
+					 memo: acctname + ' balance at ' + lastTx.date +': $' + lastTx.balance };
+				transactions.bankTx.push(blanceTx);
+				console.log('Adding balance record to ' + filenamePrefix + ': ' + JSON.stringify(blanceTx));
+			}
 			const bankTxString = transactions.bankTx.map(transaction => { return this.formatBankTx(transaction); })
 				.join('\n\n');
+			
 			fs.writeFile(filenamePrefix + '.bank.qif', '!Type:Bank\n' + bankTxString,
 				(err) => {
 					if (err) console.log(err);
 					console.log(transactions.bankTx.length + " bank records generated in " + filenamePrefix + '.bank.qif created.');
 				});
+
 		}
 
 		if (transactions.investTx && transactions.investTx.length > 0) {

@@ -6,7 +6,8 @@
         "dateFormat" :"MM/DD/YYYY",
         "columns": {"date":1,
             "memo":5,
-            "amount":6
+            "amount":6,
+            "balance":7
         }
     },
     "interestPayee" : "HSA Bank",

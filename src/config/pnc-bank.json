@@ -11,7 +11,8 @@
         "columns": {"date":0,
             "memo":1,
             "withdrawls": 2,
-            "amount": 3
+            "amount": 3,
+            "balance": 4
         }
     },
     "transfer" :{

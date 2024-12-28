@@ -87,6 +87,9 @@ class TransactionMapper {
         if (tx.amount == '0.00' && tx.quantity) {
           tx.amount = tx.quantity;
         }
+        if (tx.balance) {
+          tx.balance = `${tx.balance.replace(/\$/, '')}`;
+        }
         tx = this.guess(tx.memo, tx);
       } else {
         tx = {};
