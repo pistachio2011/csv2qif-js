@@ -12,7 +12,7 @@ class QIFGenerator {
 				// get the last part of the filenamePrefix as the account name
 				const acctname = filenamePrefix.split('.').pop();
 				const blanceTx = { date: lastTx.date,
-					 amount: 0,
+					 amount: 0.001,
 					 payee: '******BALANCE*****',
 					 category: 'A Do Not Count - Exp',
 					 memo: acctname + ' balance at ' + lastTx.date +': $' + lastTx.balance };
