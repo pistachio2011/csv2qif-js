@@ -33,8 +33,10 @@
         "SHORT-TERM CAP GAIN": "CGShort",
         "Shares In": "ReinvDiv",
         "Add Shares": "ShrsIn",
-        "REDEMPTION PAYOUT": "RtrnCap"
+        "REDEMPTION PAYOUT": "RtrnCap",
+        "INTEREST": "IntInc"
     },
+
     "bankCategories": {
         "TRANSFER": "Transfer",
         "DIRECT DEPOSIT" : "Other Income : Percent Rebate",

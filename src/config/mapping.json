@@ -1,6 +1,8 @@
 {
     "History_for_Account_X":"fidelity-brokerage.json",
-    "History_for_Account_":"fidelity-ira.json",
-    "Credit Card":"fidelity-visa.json",
+    "History_for_Account_Z":"fidelity-espp.json",
+    "History_for_Account_2":"fidelity-espp.json",
+    "History_for_Account_3":"fidelity-ira.json",
+    "Credit Card - ":"fidelity-visa.json",
     "accountDetailByDateExport":"pnc-bank.json"
 }
