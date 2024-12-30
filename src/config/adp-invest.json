@@ -1,0 +1,20 @@
+{
+    "csv": {
+        "comments" : ["Copy the transaction from Adp UI to a spreadsheet, and download as csv. Do name the file with a prefix 'adp-invest' to use this config"],
+        "headers": "Symbol,Settlement Date,,Trade Date,,Description,Quantity,Price,Amount,",
+        "skipLines" : 1,
+        "type" : "investment",
+        "dateFormat" :"MM/DD/YYYY",
+        "columns": {"date":1,
+            "memo":5,
+            "security":0,
+            "quantity":6,
+            "amount":8
+        }
+    },
+    "interestPayee" : "Bank Money Market",
+    "investment": {
+        "Dividends and Earnings": "ReinvDiv",
+        "Contribution - ": "Buy"
+    }
+}
