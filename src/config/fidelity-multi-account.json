@@ -1,0 +1,54 @@
+{
+    "name": "Fidelity Multi Account",
+    "csv": {
+        "headers": "Run Date,Account,Account Number,Action,Symbol,Description,Type,Exchange Quantity,Exchange Currency,Currency,Price,Quantity,Exchange Rate,Commission,Fees,Accrued Interest,Amount,Settlement Date",
+        "skipLines" : 1,
+        "type" : "investment",
+        "dateFormat" :"MM/DD/YYYY",
+        "columns": {"date":0,
+            "account":1,
+            "accountNumber":2,
+            "security":5,
+            "memo":3,
+            "quantity":11,
+            "commission":13,
+            "fees":14,
+            "amount":16,
+            "exchangeRate":12
+        }
+    },
+    "transfer" :{},
+    "interestPayee" : "Fidelity Cash Reserves",
+    "payee" : {
+        "DIRECT DEPOSIT ELAN CARDSVCRedemption" : "Visa Signature",
+        "INTEREST EARNED CASH" : "Fidelity Cash Reserves",
+        "REINVESTMENT CASH" : "Fidelity Cash Reserves",
+        "REINVESTMENT FIDELITY GOVERNMENT CASH RESERVES" : "Fidelity Cash Reserves",
+        "DIVIDEND RECEIVED FIDELITY GOVERNMENT CASH RESERVES": "Fidelity Cash Reserves"   
+    },
+    "investment": {
+        "DIVIDEND": "Div",
+        "Dividend": "Div",
+        "YOU BOUGHT": "Buy",
+        "Contributions": "Buy",
+        "YOU SOLD": "Sell",
+        "Exchanges": "Sell",
+        "FEE CHARGED": "MiscExp",
+        "FOREIGN TAX PAID": "MiscExp",
+        "IN LIEU OF FRX SHARE": "Sell",
+        "REINVESTMENT": "ReinvDiv",
+        "SHORT-TERM CAP GAIN": "CGShort",
+        "Realized Gain/Loss": "CGLong",
+        "Shares In": "ReinvDiv",
+        "Add Shares": "ShrsIn",
+        "REDEMPTION PAYOUT": "RtrnCap"
+    },
+    "bankCategories": {
+        "TRANSFER": "Transfer",
+        "DIRECT DEPOSIT" : "Other Income : Percent Rebate",
+        "REINVESTMENT CASH" : "Investment Inco:Interest",
+        "INTEREST EARNED CASH" : "Investment Inco:Interest",
+        "TAX WITHHELD CASH": "Taxes : Federal Income Tax",
+        "REINVESTMENT FIDELITY GOVERNMENT CASH RESERVES" : "Investment Inco:Interest",
+        "DIVIDEND RECEIVED FIDELITY GOVERNMENT CASH RESERVES": "Investment Inco:Interest"    }
+}
