@@ -4,22 +4,25 @@
             "If you use search transaction for 1 year, then export, the export only give the last 90 days of history.",
             "The workaround is to copy the output from screen to google spreadsheet, then save the csv"],
     
-        "headers": "Date,Description,Withdrawals,Deposits,Balance",
+        "headers": "Transaction Date,Transaction Description,Amount",
         "skipLines" : 1,
-        "dateFormat" :"MM/DD/YYYY",
+        "dateFormat" :"YYYY-MM-DD",
         "type" : "bank",
         "columns": {"date":0,
             "memo":1,
-            "withdrawls": 2,
-            "amount": 3,
-            "balance": 4
+            "amount": 2
         }
     },
     "transfer" :{
-        "ONLINE TRANSFER TO XXXXX1111" : "PNC Savings",
-        "ONLINE TRANSFER FROM XXXXX1111" : "PNC Savings",
-        "ONLINE TRANSFER TO XXXXX2222" : "PNC Checking",
-        "ONLINE TRANSFER FROM XXXXX2222" : "PNC Checking"        
+        "ONLINE TRANSFER TO XXXXX4306" : "RQ - Checking",
+        "ONLINE TRANSFER FROM XXXXX4306" : "RQ - Checking",
+        "ONLINE TRANSFER TO XXXXX2786" : "Lei - PNC Savings 786",
+        "ONLINE TRANSFER FROM XXXXX2786" : "Lei - PNC Savings 786",
+        "ONLINE TRANSFER TO XXXXX9448" : "PNC Rental Account 448",
+        "ONLINE TRANSFER FROM XXXXX9448" : "PNC Rental Account 448",
+        "ONLINE TRANSFER TO XXXXX4009" : "PNC Checking 009",
+        "ONLINE TRANSFER FROM XXXXX4009" : "PNC Checking 009"
+
     },
     "payee" : {
         "INTEREST PAYMENT" : "PNC Bank"
